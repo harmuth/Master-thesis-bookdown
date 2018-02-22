@@ -1,0 +1,23 @@
+--- 
+title: "A case study in the application of machine learning methods in non-life insurance"
+author: "Philip Harmuth"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: 
+  bookdown::gitbook
+documentclass: book
+bibliography: []
+biblio-style: apalike
+link-citations: yes
+---
+
+\newpage
+
+# Motivation {-}
+
+Machine learning methods have been gaining a lot of traction the last couple of years with 
+
+# Abstract {-}
+
+In the thesis I...
+
