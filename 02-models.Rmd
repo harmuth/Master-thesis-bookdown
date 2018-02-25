@@ -1,0 +1,62 @@
+# Models
+
+## General machine learning heuristics
+In this section I will describe the different heuristics and concepts which are fundamental in used in machine learning.
+
+### Bias-variance tradeoff
+
+
+### Hyper parameter tuning
+Most machine learning methods have hyperparameters which differ from the model parameters since they are set before model is fitted. These hyperparameters typically specify how fast the learning algorithms learn from data (i.e. learning rate, batch size), model complexity (i.e. number of nodes and hidden layers in neural networks), how much we want to regularize the model (i.e. shrinkage rate) and other parameters which the learning algorithm can't optimize during training That is not to say that those are the only types of parameters, that can be hyperparameters. For example if we have a linear model 
+$$
+Y = \beta_0 + X\beta +\epsilon
+$$
+and fix a $\beta_i$ before fitting the rest of the $\beta$s then $\beta_i$ becomes a hyperparameter.
+
+The value we those for our hyperparameters may not be the optimal values and that's where we use hyperparameter tuning comes into play. The idea of hyperparameter tuning is that for each hyperparameter $\gamma_i$, $i=1...k$ we have a set of candidate parameters $\gamma_{ij}$ $j=1...l_i$. For each of the $\prod_{i=1}^kl_i$ combinations in the hyperparameter grid we are then going the run the learning algorithm on data and choose the combination of hyperparameters which gives us the best model performance. In order to choose a model with the best generalization we'll measure the model performance either on our validation/development dataset or using cross-validation. The exhaustive search amongst all combinations of candidate parameters is called grid-search. 
+
+If the hyperparameter grid is too large to make it practically feasible to use grid search another method is to sample (without replacement) the grid for number of hyperparameter combinations which are feasible and carry out the hyperparameter tuning on this reduced partial grid.
+
+### Regularization and "the bet on sparsity"
+
+### Model validation
+
+#### Cross-validation
+
+#### Train / dev / test
+
+#### Bayesian Approach
+  
+#### Bootstrapping
+
+## Neural networks
+
+### Vanilla-NN (NN basics)
+
+#### Activation functions
+
+#### Gradient descent for neural networks
+
+### Regularization
+
+#### Norm regularization
+
+#### Drop-out
+
+#### Early stopping
+
+## Regularized general linear models
+
+### LASSO regression
+
+### Ridge regression
+
+### Elastic net regression
+
+## Boosting
+
+### Regularization
+
+## Meta ensemble methods
+
+### Stacking

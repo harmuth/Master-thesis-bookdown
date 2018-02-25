@@ -1,0 +1,9 @@
+# Software, languages and libraries
+In this section we'll go through which software I use in the thesis.
+
+## SAS - Statistical Analysis Software
+
+
+## R
+
+### Packages

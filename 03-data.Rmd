@@ -1,0 +1,4 @@
+# Data
+Description of data and insurance data in general
+
+## Exploratory data analysis
