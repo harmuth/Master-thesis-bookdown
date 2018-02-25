@@ -33,7 +33,7 @@ Cross-validation is a method
 
 ## Neural networks
 FIXME: Intro
-Neural networks consists of an input layer connected to a sequence of hidden layers of neurons which is then connected to an output layer with one or more output nodes. The input layer takes a feature vector i.e. an observation which we denote $a^{[0]}$ and feeds it forward to the neurons in the first hidden layer. The neurons then process the received information by making a linear transformation of the input and then applies an activation function $\sigma(x)$
+Neural networks consists of an input layer connected to a sequence of hidden layers of neurons which is then connected to an output layer with one or more output nodes. The input layer takes a feature vector i.e. an observation which we denote $a^{[0]}$ and feeds it forward to the neurons in the first hidden layer. The neurons then process the received information by making a linear transformation of the input which we denote $z^{[1]}$ and then applying an activation function $\sigma(x)$ to the linear transformation. The output from this computation is $a^{[1]}$ which is then fed forward to next hidden layer $l$ until we reach the output  layer which outputs our prediction $a^{[l]}=\hat{y}$. In the regression setting we usually have one output neuron, but it is possible to have more than one. In the context of insurance one might have a single neural network for a product with an output neuron for each coverage. Here the heuristic is that within the same product a costumer share a basic risk profile across coverages which the neural network learns and can utilize to predict riskpremiums for all coverages at once.
 
 ### Vanilla-NN (NN basics)
 
