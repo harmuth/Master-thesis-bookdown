@@ -22,6 +22,8 @@ If the hyperparameter grid is too large to make it practically feasible to use g
 ### Model validation
 
 #### Cross-validation
+FIXME:
+Cross-validation is a method 
 
 #### Train / dev / test
 
@@ -30,6 +32,8 @@ If the hyperparameter grid is too large to make it practically feasible to use g
 #### Bootstrapping
 
 ## Neural networks
+FIXME: Intro
+Neural networks consists of an input layer connected to a sequence of hidden layers of neurons which is then connected to an output layer with one or more output nodes. The input layer takes a feature vector i.e. an observation which we denote $a^{[0]}$ and feeds it forward to the neurons in the first hidden layer. The neurons then process the received information by making a linear transformation of the input and then applies an activation function $\sigma(x)$
 
 ### Vanilla-NN (NN basics)
 
@@ -46,10 +50,9 @@ If the hyperparameter grid is too large to make it practically feasible to use g
 #### Early stopping
 
 ## Regularized general linear models
+Regularized
 
 ### LASSO regression
-
-### Ridge regression
 
 ### Elastic net regression
 
