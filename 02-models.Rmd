@@ -44,28 +44,36 @@ Here $W^{[i]}$ is the $p_{i-1}\times p_i$ dimensional weight matrix for layer $i
 These calculations can be vectorized such that
 
 $$
-z^{[i]}_j = W^{[i]}_j a^{[i-1]}+ b^{[i]}_j,\; i=1\dots l,\, j=1\dots p_i \\
-a^{[i]}_j = \sigma(z^{[i]}_j),\; i=1\dots l,\, j=1\dots p_i \\
+z^{[i]} = W^{[i]} a^{[i-1]}+ b^{[i]},\; i=1\dots l\\
+a^{[i]} = \sigma(z^{[i]}),\; i=1\dots l\\
 $$
 
+Here the activation function is applied elementwise. The neural network can be as it's name suggest be represented visually as a network
 
-Looking at a network graph we can visualize this.
-
-```{r, eval=FAKSE}
+```{r, eval=FALSE}
 networkgraph
 ```
 
 
-In above example we keep the same activation function throughout the entire network. Usually a appropriate activation function is chosen for the output layer depending out the domain of the target variable $y$. We'll go deeper into detail about different activation functions on later.
 
+In training the learning algorithm **wording** updates/optimizes/adjusts the weight matrices $W^{[i]},\, i=1 \dots l$ such that we hopefully see the training error decrease. But how do we update the weights? The basic idea is to calculate the derivative of our loss function with respect to the weights and update the weights by taking a step in opposite direction. We'll go deeper into detail about different gradient descent optimization algorithms later.
+
+**Below should be moved to a section about NN in the context if insurance**
 In the regression setting we usually have one output neuron, but it is possible to have more than one. In the context of insurance one might have a single neural network for a product with an output neuron for each coverage. Here the heuristic is that within the same product a costumer share a basic risk profile across coverages which the neural network learns and can utilize to predict riskpremiums for all coverages at once.
 
-### Vanilla-NN (NN basics)
+In above example we keep the same activation function throughout the entire network. Usually a appropriate activation function is chosen for the output layer depending out the domain of the target variable $y$.
 
-#### Activation functions
+### Activation functions
 
-#### Gradient descent for neural networks
+### Gradient descent
 
+FIXME: GD, SGD, mini batch
+
+### Gradient descent derived algorithms
+Momentum, Adagrad(DELTA), ADAM.
+
+http://ruder.io/deep-learning-optimization-2017/index.html#improvingadam
+http://ruder.io/optimizing-gradient-descent/index.html#gradientdescentoptimizationalgorithms
 ### Regularization
 
 #### Norm regularization
